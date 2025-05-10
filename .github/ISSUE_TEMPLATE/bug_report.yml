@@ -1,0 +1,97 @@
+name: "🐞 Bug Report"
+description: |
+  Use este template para reportar problemas e bugs no Synapsy.
+labels:
+  - bug
+
+title: "[BUG] Título sucinto do problema"
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado por ajudar a melhorar o Synapsy! Por favor, preencha os detalhes abaixo para que eu possa reproduzir e corrigir o problema mais rápido!
+
+  - type: input
+    id: description
+    attributes:
+      label: "Descrição do bug"
+      description: "Descreva o que aconteceu de forma clara e concisa"
+      placeholder: "O timer do Pomodoro não reinicia após 25 minutos"
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: "Passos para reproduzir"
+      description: "Liste em ordem o que você fez para encontrar o bug"
+      placeholder: |
+        1. Abri o Synapsy
+        2. Iniciei um Pomodoro
+        3. Ao terminar, cliquei em 'Reiniciar'
+    validations:
+      required: true
+
+  - type: input
+    id: expected
+    attributes:
+      label: "Comportamento esperado"
+      description: "O que você esperava que acontecesse?"
+      placeholder: "O timer deveria reiniciar automaticamente e começar um novo ciclo"
+    validations:
+      required: true
+
+  - type: input
+    id: actual
+    attributes:
+      label: "Comportamento atual"
+      description: "O que aconteceu na verdade?"
+      placeholder: "O timer parou e não reiniciou até eu recarregar a página"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: "Ambiente"
+      description: "Selecione onde o bug ocorreu"
+      options:
+        - "Web (desktop)"
+        - "Web (mobile)"
+        - "iOS"
+        - "Android"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: browser
+    attributes:
+      label: "Navegador"
+      description: "Selecione o navegador"
+      options:
+        - "Firefox (Stable)"
+        - "Firefox (Latest)"
+        - "Baseado no Chromium"
+        - "Safari"
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: "Versão do Synapsy"
+      description: "Informe a versão do Synapsy (ex.: v1.0.beta)"
+      placeholder: "vX.X.X"
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional_info
+    attributes:
+      label: "Informações adicionais"
+      description: "Anexe logs, screenshots ou gravações de tela, se tiver"
+      placeholder: "link para screenshot ou log"
+    validations:
+      required: false
